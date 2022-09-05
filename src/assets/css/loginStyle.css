@@ -1,0 +1,96 @@
+.login{
+    font-family: Consolas, monospace !important;
+    position: relative;
+    margin-top:380px;
+    top: 45%;
+    left: 50%;
+    width: 400px;
+    transform: translate(-50%,-50%);
+    background: rgba(77, 83, 77, 0.96);
+    padding: 3% 2% 2%;
+    border-radius: 21% 2% 21% 2%;
+    box-shadow:inset 0px 0px 5px 0px #888 ,3px 3px 3px black,5px 5px 10px black;}
+
+.textField{
+    padding-top: 5px;
+
+}
+
+.textField input{
+    padding: 5px;
+    position: relative;
+    border-bottom:2px solid #d5cfcf;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius:10px;
+    box-shadow: 0px 0px 5px 0px #888;
+    text-indent: 25px;
+}
+
+input{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#submit{
+    position: relative;
+    border-radius:20px;
+    margin-top: 18px;
+    background-color: #365bd1;
+    /*background-color: #0d815b;*/
+    border: 2px solid black;
+    width:120px;
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+    text-align: center;
+}
+
+#submit:hover{
+    background-color: #0b2fa7;
+}
+
+#submit:active{
+    background-color: #e1d945;
+}
+
+
+.civilians_login , .civilians_login:visited{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+    padding-bottom: 7px;
+    font-size:21px ;
+    color: #0b2fa7;
+    text-decoration-color: #0b2fa7;
+    text-decoration-thickness: 2px;
+}
+
+.errorMsg{
+    text-align: center;
+    font-size:20px ;
+    background-color: rgba(236, 64, 95, 0.3);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 12px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+.soldiersIcon {
+    align-self: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.icon{
+    position: relative;
+    z-index: 999;
+    align-content: center;
+    top: 28px;
+    padding-left:7px;
+}
+

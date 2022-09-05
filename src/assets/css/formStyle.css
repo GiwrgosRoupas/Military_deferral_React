@@ -1,0 +1,13 @@
+
+.textInput{
+    border-radius:3px;
+    border:1px solid black;
+}
+
+input[type="radio"]{
+    height: 1em;
+    width: 1em;
+}
+
+
+

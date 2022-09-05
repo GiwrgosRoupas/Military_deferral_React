@@ -1,0 +1,57 @@
+.tabsContainer{
+    margin-top: 3%;
+    width:70%;
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+}
+
+.tab{
+    width: 50%;
+    font-size:20px;
+    font-weight:bold;
+    border: 1px solid black;
+    border-radius: 5px;
+    position: relative;
+}
+
+.tabsBar{
+    border: 1px solid black;
+}
+
+.tabsContent{
+    border: 2px solid black;
+    border-bottom: 4px solid black;
+}
+
+thead{
+    border:1px solid black;
+}
+
+.active-tab{
+    background-color: #ede4d7;
+    box-shadow:inset 0px 0px 4px 1px #888;
+
+}
+
+.content{
+    width: 100%;
+}
+
+.active-content{
+    background-color: #ded7ce;
+    margin-right: auto;
+    margin-left: auto;
+    display: table;
+}
+
+.new_user{
+    display: inline-grid;
+    
+    margin-right: auto;
+    width: 50%;
+}
+
+#allUsersTable{
+
+}
