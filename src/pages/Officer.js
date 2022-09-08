@@ -11,7 +11,7 @@ const TableRow=(props)=>{
     let [comments, setComments] = useState('');
     let [months, setMonths] = useState('');
 
-    function approveForm(props) {
+    function approveForm() {
         comments==='' && setComments('-');
         axios.post('/api/v1/form/officer/comments?id='+props.id,{
             comments
@@ -20,18 +20,13 @@ const TableRow=(props)=>{
             .then(()=>props.setUpdate(true)).catch((e)=>alert(e))
     }
 
-    function denyForm(props) {
+    function denyForm() {
         comments==='' && setComments('-');
         axios.post('/api/v1/form/officer/comments?id='+props.id,{
             comments
         })
             .then(()=>axios.post('/api/v1/form/denyForm?id='+props.id))
             .then(()=>props.setUpdate(true)).catch((e)=>alert(e))
-    }
-
-    function officerComments() {
-        comments.length!==0 && axios.post('/api/v1/form/officer/comments?id='+props.id)
-            .then((r)=>console.log(r +'    ' + comments))
     }
 
     function showFile(blob){
