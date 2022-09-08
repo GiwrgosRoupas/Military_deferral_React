@@ -47,7 +47,7 @@ thead{
 
 .new_user{
     display: inline-grid;
-    
+    margin-left: 50%;
     margin-right: auto;
     width: 50%;
 }

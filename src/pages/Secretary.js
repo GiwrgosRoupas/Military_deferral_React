@@ -30,13 +30,6 @@ const TableRow=(props)=>{
 
     }
 
-    function secretaryComments() {
-        comments.length!==0 &&
-        axiosInstance.post('/api/v1/form/secretary/comments?id='+props.id,{
-            comments
-        })
-    }
-
     function showFile(blob){
         var newBlob = new Blob([blob], {type: "application/pdf"})
         if (window.navigator && window.navigator.msSaveOrOpenBlob) {

@@ -3,7 +3,6 @@ import axios from "axios";
 const axiosInstance= axios.create({
     baseURL: 'http://localhost:8080/',
      headers:{
-
          Accept: 'application/json',
          ContentType: 'application/json',
          AccessControlAllowOrigin: '*'
@@ -11,12 +10,15 @@ const axiosInstance= axios.create({
 
 axiosInstance.interceptors.request.use((config)=>{
     config.headers={
-        Authorization: 'Bearer ' + localStorage.getItem('accessToken')
+        Authorization: 'Bearer ' + localStorage.getItem('accessToken'),
+        AuthorizationRefresh: 'Bearer '+ localStorage.getItem('refreshToken')
     }
 
 
     return config
 })
+
+
 
 
 export default axiosInstance

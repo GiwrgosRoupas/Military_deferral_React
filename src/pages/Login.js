@@ -31,12 +31,12 @@ export default function Login() {
     const [role, setRole] = useState("")
 
 
-
-
     const loginAuth = (e) => {
         e.preventDefault()
-        fetch('http://localhost:8080/login?username='+username+'&password='+password, {
+        fetch('http://localhost:8080/login', {
             method: 'POST',
+            headers: { 'Username': username,
+                'Password': password}
         }).then((response)=>response.json())
             .then((response) => {
                 console.log(response)
