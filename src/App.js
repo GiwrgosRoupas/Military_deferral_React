@@ -1,7 +1,7 @@
 import React, {useMemo, useState} from 'react';
 import Login from "./pages/Login";
 import Form from "./pages/Form";
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
 import Officer from "./pages/Officer";
 import Secretary from "./pages/Secretary";
 import Header from "./Header";
@@ -20,6 +20,7 @@ function App() {
               <UserContext.Provider value={providerValue}>
                   <Header/>
                   <Routes>
+                      <Route path="/" element={<Navigate to="/login" />}/>
                       <Route path='/admin' element={<Admin/>}/>
                       <Route  path='/login' element={<Login/>}/>
                       <Route  path='/form' element={<Form/>}/>

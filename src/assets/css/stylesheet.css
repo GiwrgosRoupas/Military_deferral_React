@@ -56,36 +56,30 @@ body{
      margin-left: auto;
      margin-right: auto;
      width: 100%;
+     border-collapse: collapse;
+     display: grid;
+ }
+
+ tbody{
+     width: 100%;
+     display: inline-table;
  }
 
  caption{
      border: 1px solid black;
  }
 
- tbody{
-     display: block;
-     border:2px solid black ;
-     border-collapse: collapse;
- }
 
  tr:nth-child(odd){
      background-color:#eeee;
+     border: 2px solid black;
  }
 
  tr:nth-child(even){
      background-color:#cccc;
+     border: 2px solid black;
  }
 
-
- table th,td{
-     width: 100%;
-     border: 1px solid silver ;
-     text-align: left;
-     padding-left: 10px;
-     padding-right: 10px;
-     border-radius: 3px;
-     padding-bottom: 2px;
- }
 
  .table-header{
      display:table-caption !important;
@@ -98,29 +92,26 @@ body{
      font-weight: bold;
  }
 
- .admin-table{
-     width:80%;
-     margin-left: auto;
-     margin-right: auto;
-     counter-reset: tableCount;
+ .admin-table th{
+     background-color: #fff;
  }
 
- .counterCellHeader, .counterCell{
-     width:5px;
+ .admin-table th,td{
+     border: 1px solid silver ;
+     text-align: left;
+     padding-left: 10px;
+     padding-right: 10px;
+     border-radius: 3px;
+     padding-bottom: 2px;
  }
 
-
- .counterCell:before{
-     content:counter(tableCount);
-     counter-increment:tableCount;
+ textarea{
+     height: 100px;
+     width: -moz-available;
  }
 
- .form-buttons{
-     display: block;
-     margin-right: auto;
-     margin-left: auto;
-     width: auto;
-     margin-bottom: 5px;
+ select{
+
  }
 
  .link{
@@ -132,6 +123,12 @@ body{
 
  .link:hover{
      cursor: pointer;
+ }
+
+ .decisionIcons{
+     height: 17px;
+     align-content: center;
+     align-self: center;
  }
 
 

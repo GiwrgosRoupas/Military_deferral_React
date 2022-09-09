@@ -40,7 +40,7 @@ export default function Form(){
             <form id="form" onSubmit={formValidation} method="POST" action="http://localhost:8080/api/v1/form/addForm" encType="multipart/form-data">
                 <div className="grid">
                     <div className="grid-item">
-                        <table className="table">
+                        <table className="form-table">
                             <caption className="table-header">Στοιχεία Πολίτη</caption>
                             <tbody>
                             <UserInput extField={'Ονοματεπώνυμο'} intField={'fullname'} title='Π.χ. Πέτρος Παύλος Δημητρίου'/>
@@ -57,7 +57,7 @@ export default function Form(){
                     </div>
 
                     <div className="grid-item">
-                        <table className="table">
+                        <table className="form-table">
                             <caption className="table-header">Λόγος αναβολής:</caption>
                             <tbody>
                             <Option reason={'Σπουδές'}/>
@@ -71,7 +71,7 @@ export default function Form(){
 
 
                     <div className="grid-item">
-                        <table className="table" >
+                        <table className="form-table" >
                             <caption className="table-header" >Έγγραφο<br/><p style={{fontSize:13, marginTop:'5px', marginBottom:'5px'}}>(PDF)</p></caption>
                             <tbody>
                             <tr>

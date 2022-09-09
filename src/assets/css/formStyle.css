@@ -10,4 +10,32 @@ input[type="radio"]{
 }
 
 
+.form-table tr{
+    text-align: left;
+}
+
+.form-table th{
+    padding-left: 12px;
+    width: 100%;
+
+}
+
+.form-table td{
+    white-space: nowrap;
+    position: relative;
+    border-left: 1px solid silver;
+    padding-left: 12px;
+    padding:10px;
+
+ }
+
+
+ .form-buttons{
+     display: block;
+     margin-right: auto;
+     margin-left: auto;
+     width: auto;
+     margin-bottom: 5px;
+ }
+
 
