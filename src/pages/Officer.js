@@ -51,7 +51,13 @@ const TableRow=(props)=>{
         <>
             <tr>
                 <td >{props.id}</td>
-                <td>{props.fullname}</td>
+                <td>{props.timeSubmitted.toString().replace('T','\n')}</td>
+                <td><b>Όνομα:</b> {props.fullname},<br/>
+                    <b>Ημερομηνία γεννήσεως:</b> {props.DOB},<br/>
+                    <b>Αριθμος ταυτότητας:</b> {props.idNumber},<br/>
+                    <b>Στρατολογικός αριθμός:</b> {props.militaryNumber}<br/>
+                    <b>Τηλέφωνο:</b> {props.phoneNumber},<br/>
+                    <b>Email:</b> {props.email}</td>
                 <td><a className="link" onClick={()=>fetch('http://localhost:8080/api/v1/form/getFileById?id='+props.id,
                     {
                         method: 'GET',
@@ -107,13 +113,15 @@ export default  function Officer(){
 
 
     return(
-<>
+<><div className="grid">
+    <div className="grid-item">
 
         <table className="admin-table">
             <caption className="table-header">Αιτήσεις</caption>
             <tbody>
             <tr>
                 <th>ID</th>
+                <th>Ημερομηνία Καταχώρησης</th>
                 <th>Στοιχεία πολίτη</th>
                 <th>Δικαιολογητικά</th>
                 <th>Σχόλια γραμματείας</th>
@@ -122,16 +130,16 @@ export default  function Officer(){
                 <th>Έγκριση</th>
             </tr>
 
-            {(data.length===0) ? <tr
-                style={{width:'auto', display:'block', textAlign:'center', fontSize:22}}>
-                <b>Καμία αίτηση.</b></tr>
-                            :
-                data.map((data)=>(
+            {data.map((data)=>(
                     <TableRow  update={update}
                                setUpdate={setUpdate}
                                id={data.id}
                                fullname={data.fullname}
                                secretaryComments={data.secretaryComments}
+                               DOB={data.dob}   idNumber={data.idNumber} militaryNumber={data.militaryNumber}
+                               phoneNumber={data.phoneNumber} email={data.email} timeSubmitted={data.timeSubmitted}
+                               DOB={data.dob} idNumber={data.idNumber} militaryNumber={data.militaryNumber}
+                               phoneNumber={data.phoneNumber} email={data.email} timeSubmitted={data.timeSubmitted}
                                fileName={data.fileName} user={localStorage.getItem('accessToken')}/>
             ))}
             </tbody>
@@ -141,6 +149,8 @@ export default  function Officer(){
                 <p style={{paddingLeft:'20px'}}><b>Τελευταία ενημέρωση {time.toLocaleString()}</b></p>
             </tr>
         </table>
+    </div>
+</div>
 </>
     )
 
