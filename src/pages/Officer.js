@@ -70,6 +70,7 @@ const TableRow=(props)=>{
                 <td>{props.secretaryComments}</td>
                 <td><textarea onChange={(e)=>setComments(e.target.value)}></textarea></td>
                 <td><select onChange={(e)=>setMonths(e.target.value)}>
+                    <option value="-" selected hidden>-</option>
                     <option value="6 μήνες">6 Μήνες</option>
                     <option value="1 χρόνο">1 Χρόνο</option>
                     <option value="2 χρόνια">2 Χρόνια</option>
