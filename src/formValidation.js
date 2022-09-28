@@ -38,7 +38,7 @@ export const formValidation=(event)=>{
             body: new FormData(event.target)
         }).then(res=>{
             if(res.ok) {
-                alert("Η αίτηση σας καταχωρήθηκε.\nΘα ενημερωθείται για την πορεία της μέσω email.")
+                alert("Η αίτηση σας καταχωρήθηκε.\nΘα ενημερωθείτε για την πορεία της μέσω email.")
             }else{
                 alert("Server error!\nRedirecting to home page in 5s.")
             }
